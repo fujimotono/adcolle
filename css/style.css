@@ -215,3 +215,43 @@ ul { padding-left: 1.2em; }
   .footer-grid { grid-template-columns: 1fr; }
   .contact-form { padding: 22px; }
 }
+
+/* ===== Version 2 additions ===== */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2000;
+  transform: translateY(-160%);
+  padding: 10px 16px;
+  color: #fff;
+  background: var(--navy);
+  border-radius: 8px;
+  font-weight: 700;
+}
+.skip-link:focus { transform: translateY(0); }
+
+:focus-visible {
+  outline: 3px solid rgba(7, 91, 216, .45);
+  outline-offset: 3px;
+}
+
+.form-note {
+  margin: -2px 0 14px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+body.menu-open { overflow: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

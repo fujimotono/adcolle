@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ADcolleはBtoB企業向けに動画制作からSNS広告運用まで一括支援するマーケティング会社です。">
+  <meta name="description" content="ADcolleはBtoB企業向けに、成果につながる動画制作とSNS広告運用を一括支援します。企画・撮影・編集・配信・改善までワンストップで対応します。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#075bd8">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="ADcolle">
+  <meta property="og:title" content="ADcolle｜動画×SNS広告で新規顧客を増やす">
+  <meta property="og:description" content="BtoB企業向けの動画制作とSNS広告運用。問い合わせにつながる集客導線を設計します。">
+  <meta property="og:url" content="https://fujimotono.github.io/adcolle/">
+  <meta name="twitter:card" content="summary_large_image">
   <title>ADcolle｜動画×SNS広告で新規顧客を増やす</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="logo" aria-label="ADcolle トップへ">
@@ -18,11 +28,11 @@
         <small>BtoB企業のための<br>動画制作 × SNS広告運用</small>
       </a>
 
-      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
+      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="global-nav" aria-label="メインナビゲーション">
+      <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
         <a href="#services">サービス</a>
         <a href="#works">制作実績</a>
         <a href="#reasons">選ばれる理由</a>
@@ -34,7 +44,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
@@ -208,11 +218,12 @@
     <section class="contact-section" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy reveal"><p class="eyebrow light">CONTACT</p><h2>集客を、もっとシンプルに。</h2><p>動画制作からSNS広告運用まで、まずはお気軽にご相談ください。</p><ul><li>相談無料</li><li>オンライン対応</li><li>無理な営業はしません</li></ul></div>
-        <form class="contact-form reveal" action="#" method="post">
+        <form class="contact-form reveal" action="#" method="post" novalidate aria-describedby="form-note">
           <label>会社名<input type="text" name="company" placeholder="株式会社〇〇"></label>
           <label>お名前<input type="text" name="name" placeholder="山田 太郎" required></label>
           <label>メールアドレス<input type="email" name="email" placeholder="sample@example.com" required></label>
           <label>ご相談内容<textarea name="message" rows="5" placeholder="ご相談内容をご記入ください"></textarea></label>
+          <p id="form-note" class="form-note">現在はデモフォームです。公開前に送信サービスを接続してください。</p>
           <button type="submit" class="button button-white full">無料相談を申し込む</button>
         </form>
       </div>
@@ -226,10 +237,10 @@
       <div><h3>メニュー</h3><a href="#works">制作実績</a><a href="#flow">制作の流れ</a><a href="#price">料金プラン</a><a href="#faq">よくある質問</a></div>
       <div><h3>お問い合わせ</h3><p class="footer-phone">03-1234-5678</p><small>平日 10:00〜18:00</small><a href="#contact" class="footer-contact">お問い合わせフォーム</a></div>
     </div>
-    <div class="copyright">© ADcolle All Rights Reserved.</div>
+    <div class="copyright">© <span id="current-year"></span> ADcolle All Rights Reserved.</div>
   </footer>
 
   <button class="back-to-top" aria-label="ページ上部へ">↑</button>
-  <script src="script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
