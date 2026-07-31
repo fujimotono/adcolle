@@ -18,6 +18,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ADcolle",
+    "url": "https://fujimotono.github.io/adcolle/",
+    "description": "動画・ホームページ・SNS広告・AI活用を組み合わせ、中小企業の集客を仕組み化します。",
+    "areaServed": "JP",
+    "serviceType": [
+      "動画制作",
+      "SNS広告運用",
+      "ホームページ制作",
+      "AI活用支援"
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -37,6 +55,7 @@
         <a href="#services">サービス</a>
         <a href="#works">実績</a>
         <a href="#strengths">選ばれる理由</a>
+        <a href="#pricing">料金</a>
         <a href="#flow">制作の流れ</a>
         <a href="#faq">よくある質問</a>
         <a class="nav-cta" href="#contact">無料相談</a>
@@ -197,7 +216,66 @@
       </div>
     </section>
 
-    <section class="section section-soft" id="flow">
+
+    <section class="section section-soft" id="pricing">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">PRICE PLAN</p>
+          <h2>目的に合わせて選べる、<span>3つのプラン</span></h2>
+          <p>金額は目安です。課題と優先順位を整理したうえで、必要な内容だけをご提案します。</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <div class="plan-label">STARTER</div>
+            <h3>集客スタータープラン</h3>
+            <p class="plan-target">ホームページがない会社・作り直したい会社向け</p>
+            <div class="price"><span>参考価格</span><strong>15万円〜</strong></div>
+            <ul>
+              <li>1ページ型ホームページ</li>
+              <li>スマートフォン対応</li>
+              <li>お問い合わせ導線</li>
+              <li>基本SEO設定</li>
+            </ul>
+            <a href="#contact" class="button button-outline full">相談する</a>
+          </article>
+
+          <article class="pricing-card featured reveal">
+            <div class="recommend">おすすめ</div>
+            <div class="plan-label">GROWTH</div>
+            <h3>集客グロースプラン</h3>
+            <p class="plan-target">問い合わせを増やす仕組みを作りたい会社向け</p>
+            <div class="price"><span>参考価格</span><strong>30万円〜</strong></div>
+            <ul>
+              <li>ホームページ制作</li>
+              <li>動画または広告素材制作</li>
+              <li>SNS広告導線の設計</li>
+              <li>アクセス分析の設定</li>
+            </ul>
+            <a href="#contact" class="button button-primary full">無料相談する</a>
+          </article>
+
+          <article class="pricing-card reveal">
+            <div class="plan-label">PARTNER</div>
+            <h3>集客パートナープラン</h3>
+            <p class="plan-target">継続的に集客改善を任せたい会社向け</p>
+            <div class="price"><span>月額目安</span><strong>10万円〜</strong></div>
+            <ul>
+              <li>動画・広告・WEBの改善</li>
+              <li>月次レポート</li>
+              <li>定例ミーティング</li>
+              <li>AI活用・業務改善支援</li>
+            </ul>
+            <a href="#contact" class="button button-outline full">内容を相談する</a>
+          </article>
+        </div>
+
+        <p class="pricing-note">※上記は構成確認用の参考価格です。正式公開前に、実際の提供内容と価格へ変更してください。</p>
+      </div>
+    </section>
+
+
+    <section class="section" id="flow">
       <div class="container">
         <div class="section-heading reveal"><p class="eyebrow">FLOW</p><h2>ご相談から改善まで</h2></div>
         <div class="flow-grid">
@@ -230,6 +308,22 @@
           <h2>まずは、現在の課題を<br>整理するところから。</h2>
           <p>「何を依頼すればよいか分からない」という段階でも問題ありません。事業の状況を伺い、優先順位を一緒に整理します。</p>
           <div class="contact-points"><span>相談無料</span><span>オンライン対応</span><span>無理な営業なし</span></div>
+
+          <div class="contact-methods">
+            <a class="contact-method" href="tel:0000000000">
+              <span class="method-icon">TEL</span>
+              <div><small>電話で相談</small><strong>電話番号を設定してください</strong></div>
+            </a>
+            <a class="contact-method" href="#">
+              <span class="method-icon">LINE</span>
+              <div><small>LINEで相談</small><strong>LINE公式アカウントを設定</strong></div>
+            </a>
+            <a class="contact-method" href="mailto:contact@example.com">
+              <span class="method-icon">MAIL</span>
+              <div><small>メールで相談</small><strong>contact@example.com</strong></div>
+            </a>
+          </div>
+
         </div>
 
         <form class="contact-form reveal" action="#" method="post" novalidate>
@@ -237,7 +331,8 @@
           <label>お名前<span>必須</span><input type="text" name="name" placeholder="山田 太郎" required></label>
           <label>メールアドレス<span>必須</span><input type="email" name="email" placeholder="sample@example.com" required></label>
           <label>ご相談内容<textarea name="message" rows="5" placeholder="現在のお悩みやご希望をご記入ください"></textarea></label>
-          <p class="form-note">現在はデモフォームです。公開前に送信先の設定が必要です。</p>
+          <label class="privacy-check"><input type="checkbox" required> プライバシーポリシーに同意する</label>
+<p class="form-note">現在はデモフォームです。公開前に送信先の設定が必要です。</p>
           <button class="button button-white full" type="submit">無料相談を申し込む <span>→</span></button>
         </form>
       </div>
@@ -247,7 +342,8 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div><a class="footer-logo" href="#top">ADcolle</a><p>AI × WEB × MARKETING<br>中小企業の集客を、仕組みに変える。</p></div>
-      <nav aria-label="フッターナビゲーション"><a href="#services">サービス</a><a href="#works">実績</a><a href="#strengths">選ばれる理由</a><a href="#flow">制作の流れ</a><a href="#faq">FAQ</a><a href="#contact">お問い合わせ</a></nav>
+      <nav aria-label="フッターナビゲーション"><a href="#services">サービス</a><a href="#works">実績</a><a href="#strengths">選ばれる理由</a><a href="#pricing">料金</a>
+        <a href="#flow">制作の流れ</a><a href="#faq">FAQ</a><a href="#contact">お問い合わせ</a></nav>
     </div>
     <div class="copyright">© <span id="current-year"></span> ADcolle All Rights Reserved.</div>
   </footer>
