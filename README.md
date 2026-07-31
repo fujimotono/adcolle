@@ -1,24 +1,48 @@
-# ADcolle Landing Page
+# ADcolle Ver.3
+
+「集客を、仕組みに変える。」を軸に、トップページを全面刷新したバージョンです。
+
+## 主な変更点
+
+- ヒーローセクションを全面リニューアル
+- 集客ダッシュボード風ビジュアル
+- CTAとスクロール誘導を改善
+- 動画・SNS広告・WEB制作・AI活用の4サービス化
+- スマートフォン表示の最適化
+- スクロールアニメーション
+- FAQ、実績、制作フロー、問い合わせ導線を再設計
 
 ## ファイル構成
-- index.html
-- style.css
-- script.js
 
-## VS Codeでの確認方法
-1. フォルダをVS Codeで開く
-2. 拡張機能「Live Server」をインストール
-3. index.htmlを右クリック
-4. 「Open with Live Server」を選択
+```text
+ADcolle_ver3/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── README.md
+```
 
-## 修正が必要な箇所
-- 電話番号
-- 会社情報
-- 制作実績
-- 料金
-- 導入企業数
-- お問い合わせフォームの送信先
-- 画像
+## 反映方法
 
-## 注意
-画像はUnsplashの外部URLを使用しています。正式公開時は自社画像へ差し替えてください。
+GitHub接続済みの `adcolle-site` に、以下を上書きしてください。
+
+- `index.html`
+- `css` フォルダ
+- `js` フォルダ
+- `README.md`
+
+その後、VS Codeのターミナルで実行します。
+
+```bash
+git add .
+git commit -m "Upgrade hero and brand design"
+git push
+```
+
+## 公開前の注意
+
+- 実績の数字はサンプルです。
+- 問い合わせフォームはまだデモです。
+- 会社情報、電話番号、料金、実案件を次工程で設定します。
