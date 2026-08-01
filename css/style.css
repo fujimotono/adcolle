@@ -411,3 +411,327 @@ button, input, textarea { font: inherit; }
   .pricing-grid { grid-template-columns: 1fr; }
   .plan-target { min-height: auto; }
 }
+
+/* ===== Ver.5: 30-second diagnosis ===== */
+.diagnosis-section {
+  padding: 110px 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(42, 177, 255, .25), transparent 26%),
+    linear-gradient(135deg, #06143a, #092867 62%, #071b49);
+}
+.diagnosis-shell {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+.diagnosis-intro h2 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.28;
+  letter-spacing: -.045em;
+}
+.diagnosis-intro h2 span { color: #64d1ff; }
+.diagnosis-intro > p:not(.eyebrow) {
+  color: #c5d3eb;
+}
+.diagnosis-intro ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+}
+.diagnosis-intro li {
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  color: #d9e6f8;
+  font-size: 11px;
+}
+.diagnosis-card {
+  min-height: 510px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 26px;
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 35px 90px rgba(0,0,0,.28);
+}
+.diagnosis-progress {
+  height: 6px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #eaf0f8;
+}
+.diagnosis-progress-bar {
+  display: block;
+  width: 20%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  transition: width .3s ease;
+}
+.diagnosis-step {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.diagnosis-step.active { display: block; }
+.diagnosis-step legend {
+  margin-bottom: 24px;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+.diagnosis-step legend small {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--blue);
+  font-family: Poppins, sans-serif;
+  font-size: 10px;
+  letter-spacing: .16em;
+}
+.diagnosis-step label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 11px;
+  padding: 15px 16px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  cursor: pointer;
+  color: #344054;
+  background: #fff;
+  font-size: 13px;
+  transition: .2s;
+}
+.diagnosis-step label:hover {
+  border-color: #9fc2fb;
+  background: #f5f9ff;
+}
+.diagnosis-step label:has(input:checked) {
+  border-color: var(--blue);
+  background: #edf5ff;
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+.diagnosis-step input {
+  accent-color: var(--blue);
+}
+.diagnosis-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+}
+.diagnosis-controls button,
+.diagnosis-retry {
+  min-height: 46px;
+  padding: 10px 21px;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.diagnosis-back {
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: #fff;
+}
+.diagnosis-back:disabled {
+  opacity: .4;
+  cursor: default;
+}
+.diagnosis-next {
+  margin-left: auto;
+  border: 0;
+  color: #fff;
+  background: var(--blue);
+}
+.diagnosis-result {
+  text-align: center;
+}
+.result-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+.score-circle {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 18px auto;
+  padding-top: 38px;
+  border-radius: 50%;
+  color: var(--blue);
+  background: radial-gradient(circle, #fff 57%, transparent 58%), conic-gradient(var(--blue) 0deg, #e6edf7 0deg);
+  box-shadow: 0 16px 45px rgba(11,99,246,.13);
+}
+.score-circle strong {
+  font-family: Poppins, sans-serif;
+  font-size: 52px;
+  line-height: 1;
+}
+.score-circle span {
+  font-weight: 800;
+}
+.diagnosis-result h3 {
+  margin: 8px 0;
+  font-size: 24px;
+}
+.diagnosis-result > p:not(.result-label) {
+  color: var(--muted);
+  font-size: 13px;
+}
+.diagnosis-advice {
+  margin: 22px 0;
+  padding: 18px;
+  border-radius: 15px;
+  text-align: left;
+  background: var(--soft);
+}
+.diagnosis-advice strong {
+  font-size: 12px;
+}
+.diagnosis-advice ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: #475467;
+  font-size: 12px;
+}
+.diagnosis-retry {
+  margin-top: 12px;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .diagnosis-shell { grid-template-columns: 1fr; gap: 42px; }
+}
+@media (max-width: 560px) {
+  .diagnosis-card { min-height: 545px; padding: 24px 18px; }
+  .diagnosis-step legend { font-size: 18px; }
+  .diagnosis-step label { align-items: flex-start; padding: 13px; }
+}
+
+/* ===== Ver.6: typography and controlled line breaks ===== */
+.title-line,
+.heading-line {
+  display: block;
+}
+
+.hero-title em,
+.problem-title em,
+.strength-title em {
+  color: #55c8ff;
+  font-style: normal;
+}
+
+.problem-title em {
+  color: var(--blue);
+}
+
+.hero-title {
+  max-width: 720px;
+  margin-inline: auto 0;
+  text-wrap: balance;
+}
+
+.problem-title,
+.strength-title,
+.contact-title {
+  text-wrap: balance;
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .hero-copy .hero-title {
+    margin-inline: 0;
+  }
+
+  .hero-title .title-line:last-child,
+  .problem-title .heading-line:last-child,
+  .strength-title .heading-line:last-child,
+  .contact-title .heading-line:last-child {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .hero-title .title-line,
+  .problem-title .heading-line,
+  .strength-title .heading-line,
+  .contact-title .heading-line {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-title {
+    max-width: 13ch;
+    margin-inline: auto;
+    font-size: clamp(44px, 14vw, 64px) !important;
+    line-height: 1.12 !important;
+  }
+
+  .hero-title .title-line:first-child {
+    margin-bottom: .08em;
+  }
+
+  .problem-title,
+  .strength-title,
+  .contact-title {
+    max-width: 13.5em;
+    margin-inline: auto;
+    font-size: clamp(29px, 8vw, 40px) !important;
+    line-height: 1.42 !important;
+  }
+
+  .problem-title .heading-line + .heading-line,
+  .strength-title .heading-line + .heading-line,
+  .contact-title .heading-line + .heading-line {
+    margin-top: .25em;
+  }
+
+  .mobile-break {
+    display: initial;
+  }
+
+  .problem-card h3 {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-title {
+    max-width: 10ch;
+    font-size: clamp(42px, 13.5vw, 58px) !important;
+  }
+
+  .hero-title .title-line:last-child em {
+    display: block;
+  }
+
+  .problem-title,
+  .strength-title,
+  .contact-title {
+    max-width: 11.5em;
+    font-size: clamp(28px, 7.6vw, 36px) !important;
+  }
+}
