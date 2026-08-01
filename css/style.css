@@ -157,20 +157,32 @@ button, input, textarea { font: inherit; }
 .strength-card h3 { margin:34px 0 12px; font-size:21px; }
 .strength-card p { margin:0; color:#bdcce6; font-size:13px; }
 
-.works-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-.work-card { overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); background:#fff; transition:.3s; }
-.work-card:hover { transform:translateY(-6px); box-shadow:var(--shadow); }
-.work-image { height:205px; background-position:center; background-size:cover; }
-.construction { background-image:linear-gradient(rgba(7,26,72,.08),rgba(7,26,72,.18)),url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=82"); }
-.manufacturing { background-image:linear-gradient(rgba(7,26,72,.08),rgba(7,26,72,.18)),url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=82"); }
-.realestate { background-image:linear-gradient(rgba(7,26,72,.08),rgba(7,26,72,.18)),url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=82"); }
-.work-body { padding:25px; }
-.work-body small { color:var(--blue); font-weight:700; }
-.work-body h3 { margin:9px 0 15px; font-size:18px; }
-.work-body p { color:var(--muted); font-size:12px; }
-.result { display:flex; align-items:end; justify-content:space-between; padding:15px 0; border-block:1px solid var(--line); }
-.result span { font-size:11px; color:var(--muted); }
-.result strong { color:var(--blue); font-size:26px; }
+.works-section { overflow:hidden; }
+.works-heading { max-width:760px; }
+.works-heading h2 span { color:var(--blue); }
+.works-heading > p:last-child { max-width:620px; color:var(--muted); }
+.featured-work { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); min-height:610px; margin-top:42px; overflow:hidden; border:1px solid var(--line); border-radius:32px; background:#071b48; box-shadow:0 30px 80px rgba(7,26,72,.14); }
+.featured-work-copy { padding:64px 58px; color:#fff; }
+.work-kicker { display:flex; align-items:center; gap:12px; color:#79d6ff; font:700 11px/1 Poppins,sans-serif; letter-spacing:.16em; }
+.work-kicker span { display:grid; place-items:center; width:30px; height:30px; border:1px solid rgba(121,214,255,.35); border-radius:50%; }
+.work-status { margin:54px 0 12px; color:#9db2d8; font-size:12px; }
+.featured-work h3 { margin:0; font-size:clamp(34px,4vw,58px); line-height:1.08; letter-spacing:-.045em; }
+.work-lead { max-width:500px; margin:28px 0 34px; color:#c5d2e9; font-size:14px; line-height:1.9; }
+.work-process { margin:0; border-top:1px solid rgba(255,255,255,.14); }
+.work-process div { display:grid; grid-template-columns:64px 1fr; gap:14px; padding:16px 0; border-bottom:1px solid rgba(255,255,255,.14); }
+.work-process dt { color:#68ceff; font-size:11px; font-weight:800; }
+.work-process dd { margin:0; color:#dce5f5; font-size:12px; }
+.work-link { display:inline-flex; gap:12px; margin-top:30px; color:#fff; font-size:13px; font-weight:800; text-decoration:none; }
+.work-link span { color:#68ceff; transition:transform .25s; }.work-link:hover span { transform:translate(3px,-3px); }
+.featured-work-visual { display:flex; align-items:center; padding:54px 0 54px 28px; background:radial-gradient(circle at 75% 45%,rgba(31,142,255,.48),transparent 52%),linear-gradient(145deg,#0b2865,#0a1943); }
+.browser-frame { width:112%; min-height:430px; overflow:hidden; border:1px solid rgba(255,255,255,.2); border-radius:24px 0 0 24px; background:#0b1e4b; box-shadow:-30px 40px 80px rgba(0,0,0,.3); transform:perspective(1200px) rotateY(-4deg); transition:transform .5s ease; }
+.featured-work:hover .browser-frame { transform:perspective(1200px) rotateY(0deg) translateX(-5px); }
+.browser-bar { display:flex; align-items:center; gap:8px; height:52px; padding:0 20px; background:#08183b; color:#8fa6cf; font-size:10px; }.browser-bar i{width:9px;height:9px;border-radius:50%;background:#7181a1}.browser-bar span{margin-left:10px}
+.browser-screen { min-height:378px; padding:62px 54px; background:radial-gradient(circle at 80% 50%,rgba(23,124,255,.45),transparent 45%),linear-gradient(135deg,#071a46,#0c367b); color:#fff; }
+.browser-screen p { margin:0 0 24px; color:#67d0ff; font-size:11px; font-weight:700; letter-spacing:.12em; }.browser-screen strong{display:block;font-size:clamp(34px,4vw,58px);line-height:1.05;letter-spacing:-.05em}.browser-screen em{color:#54c8ff;font-style:normal}.browser-cta{display:inline-block;margin-top:34px;padding:13px 22px;border-radius:999px;background:linear-gradient(90deg,#087cff,#15bdf5);font-size:11px;font-weight:800}.browser-metrics{display:flex;gap:8px;margin-top:42px}.browser-metrics span{padding:7px 10px;border:1px solid rgba(255,255,255,.15);border-radius:8px;color:#aac0e6;font:600 9px Poppins,sans-serif}
+.concept-label { display:flex; justify-content:space-between; align-items:end; gap:30px; margin:76px 0 22px; }.concept-label span{color:var(--blue);font:800 11px Poppins,sans-serif;letter-spacing:.18em}.concept-label p{margin:0;color:var(--muted);font-size:11px}
+.concept-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }.concept-card{position:relative;min-height:310px;padding:42px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#fff,#f4f8ff);transition:.35s}.concept-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#bfd3f6}.concept-no{position:absolute;right:30px;top:28px;color:#cbd8ed;font:800 32px Poppins,sans-serif}.concept-card small{color:var(--blue);font:700 10px Poppins,sans-serif;letter-spacing:.14em}.concept-card h3{margin:52px 0 16px;font-size:26px;line-height:1.3}.concept-card p{max-width:430px;color:var(--muted);font-size:12px;line-height:1.8}.concept-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.concept-tags span{padding:7px 10px;border-radius:999px;background:#e9f2ff;color:#285b9f;font-size:10px;font-weight:700}
+@media (max-width: 800px){.featured-work{grid-template-columns:1fr;border-radius:24px}.featured-work-copy{padding:42px 28px}.work-status{margin-top:38px}.featured-work-visual{padding:0 0 30px 28px}.browser-frame{min-height:340px;border-radius:20px 0 0 20px;transform:none}.browser-screen{min-height:290px;padding:44px 32px}.concept-label{display:block;margin-top:54px}.concept-label p{margin-top:8px}.concept-grid{grid-template-columns:1fr}.concept-card{min-height:270px;padding:32px}.concept-card h3{margin-top:42px;font-size:23px}}
 
 .flow-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
 .flow-card { position:relative; padding:28px 20px; border-radius:18px; background:#fff; border:1px solid var(--line); }
@@ -1875,4 +1887,320 @@ body {
 
 .hero {
   overflow-x: clip;
+}
+
+
+/* Ver.11.2 — Featured work heading: controlled mobile line breaks */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .works-feature-title {
+    font-size: clamp(2.35rem, 10.2vw, 3.65rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.045em !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    text-wrap: balance;
+  }
+
+  .works-feature-title span,
+  .works-feature-title-copy {
+    display: inline;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
+
+  .works-feature-title .mobile-only,
+  .works-feature-title-copy .mobile-only {
+    display: block;
+  }
+}
+
+@media (max-width: 390px) {
+  .works-feature-title {
+    font-size: clamp(2.15rem, 10vw, 3rem) !important;
+  }
+}
+
+
+/* =========================================================
+   Ver.11.3 — Featured work title: strict 3-line layout
+   ========================================================= */
+
+.works-feature-title {
+  margin: 0;
+  font-size: clamp(3.2rem, 4.8vw, 5.4rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.055em !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  text-wrap: nowrap;
+}
+
+.works-feature-title .works-title-line {
+  display: block;
+  width: 100%;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+.works-feature-title .works-title-line + .works-title-line {
+  margin-top: .08em;
+}
+
+/* Medium desktop / tablet */
+@media (max-width: 1180px) {
+  .works-feature-title {
+    font-size: clamp(2.8rem, 5.2vw, 4.5rem) !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .works-feature-title {
+    font-size: clamp(2.45rem, 6vw, 3.8rem) !important;
+    line-height: 1.1 !important;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+  .works-feature-title {
+    font-size: clamp(2rem, 8.3vw, 3rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .works-feature-title .works-title-line {
+    white-space: nowrap !important;
+  }
+}
+
+/* Narrow smartphone */
+@media (max-width: 390px) {
+  .works-feature-title {
+    font-size: clamp(1.82rem, 8vw, 2.5rem) !important;
+  }
+}
+
+/* =========================================================
+   Ver.11.4 — Featured work title fit fix
+   3 lines, no clipping, balanced on desktop/mobile
+   ========================================================= */
+
+.works-feature-title {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  font-size: clamp(2.65rem, 3.65vw, 3.85rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.045em !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  text-wrap: wrap !important;
+}
+
+.works-feature-title .works-title-line {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+.works-feature-title .works-title-line + .works-title-line {
+  margin-top: .12em;
+}
+
+/* Give the left case-study copy enough usable width */
+.works-feature-main,
+.works-feature-copy,
+.featured-work-copy,
+.work-feature-copy {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Laptop / medium desktop */
+@media (max-width: 1280px) {
+  .works-feature-title {
+    font-size: clamp(2.35rem, 3.9vw, 3.25rem) !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .works-feature-title {
+    font-size: clamp(2.2rem, 5vw, 3rem) !important;
+    line-height: 1.14 !important;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+  .works-feature-title {
+    font-size: clamp(1.9rem, 7.2vw, 2.55rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  .works-feature-title .works-title-line {
+    white-space: nowrap !important;
+  }
+}
+
+/* Narrow smartphone */
+@media (max-width: 390px) {
+  .works-feature-title {
+    font-size: clamp(1.72rem, 7vw, 2.15rem) !important;
+  }
+}
+
+/* =========================================================
+   Ver.12 — Final polish: no new sections
+   ========================================================= */
+
+/* Featured work headline: short, stable, premium */
+.works-feature-title {
+  width: 100%;
+  max-width: 10ch;
+  margin: 0;
+  font-size: clamp(3.1rem, 4.6vw, 5.1rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.055em !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance !important;
+}
+
+.works-feature-title .works-title-line {
+  display: block;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+}
+
+.works-feature-title .works-title-line + .works-title-line {
+  margin-top: .08em;
+}
+
+/* Keep paragraphs readable and prevent awkward line lengths */
+.works-feature-copy p,
+.featured-work-copy p,
+.work-feature-copy p {
+  max-width: 34em;
+  line-height: 1.9;
+}
+
+/* Tighten excessive motion for a calmer premium feel */
+.service-card:hover,
+.problem-card:hover,
+.work-card:hover,
+.pricing-card:hover {
+  transform: translateY(-5px) scale(1.006) !important;
+}
+
+.button:hover {
+  transform: translateY(-1px) !important;
+}
+
+/* Laptop */
+@media (max-width: 1280px) {
+  .works-feature-title {
+    font-size: clamp(2.8rem, 4.2vw, 4.25rem) !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .works-feature-title {
+    max-width: 9.5ch;
+    font-size: clamp(2.5rem, 5.8vw, 3.8rem) !important;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+  .works-feature-title {
+    max-width: 9.5ch;
+    margin-inline: auto;
+    font-size: clamp(2.3rem, 9vw, 3.25rem) !important;
+    line-height: 1.1 !important;
+    text-align: center;
+  }
+
+  .works-feature-title .works-title-line {
+    text-align: center;
+  }
+
+  .works-feature-copy,
+  .featured-work-copy,
+  .work-feature-copy {
+    text-align: left;
+  }
+
+  .works-feature-copy p,
+  .featured-work-copy p,
+  .work-feature-copy p {
+    max-width: none;
+  }
+}
+
+/* Narrow smartphone */
+@media (max-width: 390px) {
+  .works-feature-title {
+    font-size: clamp(2.05rem, 8.8vw, 2.7rem) !important;
+  }
+}
+
+/* =========================================================
+   Ver.13 — Featured work title size fix
+   ========================================================= */
+.works-feature-title {
+  max-width: 100% !important;
+  font-size: clamp(2.4rem, 3.35vw, 3.75rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.045em !important;
+  overflow: visible !important;
+}
+
+.works-feature-title .works-title-line {
+  display: block;
+  white-space: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+@media (max-width: 1280px) {
+  .works-feature-title {
+    font-size: clamp(2.25rem, 3.8vw, 3.35rem) !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .works-feature-title {
+    font-size: clamp(2.15rem, 5vw, 3rem) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .works-feature-title {
+    max-width: 100% !important;
+    font-size: clamp(2rem, 7.4vw, 2.7rem) !important;
+    line-height: 1.16 !important;
+    text-align: left !important;
+  }
+
+  .works-feature-title .works-title-line {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .works-feature-title {
+    font-size: clamp(1.85rem, 7vw, 2.35rem) !important;
+  }
 }
