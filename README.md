@@ -1,38 +1,43 @@
-# ADcolle Ver.7 — Apple-like Centered Layout
+# ADcolle Ver.8 — Trust & SEO Foundation
 
-Ver.6で発生していた、画面幅による中央位置のずれと見出しの不自然な改行を修正しました。
+正式公開に必要な信頼性と技術SEOの基本ファイルを追加しました。
 
-## 主な修正
+## 追加内容
 
-- ヒーロー全体をApple公式サイトのような中央1カラム構成へ変更
-- PC・タブレット・スマートフォンですべて中央揃え
-- 「集客を、／仕組みに変える。」の各行を途中で分断しない
-- スマートフォン幅に応じて文字サイズを自動調整
-- ヘッダーのロゴが左端で切れる問題を防止
-- ダッシュボードを中央配置
-- 横スクロールと画面外へのはみ出しを防止
-- Safe Area対応
+- ADcolleの考え方・代表メッセージ
+- 会社情報セクション
+- プライバシーポリシーページ
+- 404エラーページ
+- favicon.svg
+- robots.txt
+- sitemap.xml
+- canonical URL
+- フッターの会社紹介・プライバシーポリシーリンク
 
-## 上書きするファイル
+## 上書き・追加するファイル
 
+- `index.html`
 - `css/style.css`
 - `README.md`
+- `privacy.html`
+- `404.html`
+- `favicon.svg`
+- `robots.txt`
+- `sitemap.xml`
 
-今回はHTMLとJavaScriptの変更はありません。
+## 正式公開前に変更
+
+- 所在地
+- 代表者名
+- 電話番号
+- メールアドレス
+- プライバシーポリシー制定日
+- 実際の事業内容と対応範囲
 
 ## GitHubへ反映
 
 ```bash
 git add .
-git commit -m "Center responsive layout in Apple style"
+git commit -m "Add company trust pages and SEO foundation"
 git push
 ```
-
-## 確認幅
-
-- 320px
-- 390px
-- 430px
-- 768px
-- 1024px
-- 1440px

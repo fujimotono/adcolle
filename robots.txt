@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fujimotono.github.io/adcolle/sitemap.xml
