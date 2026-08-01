@@ -1,43 +1,37 @@
-# ADcolle Ver.8 — Trust & SEO Foundation
+# ADcolle Ver.9 — Premium Motion
 
-正式公開に必要な信頼性と技術SEOの基本ファイルを追加しました。
+営業資料として見せられる品質を目指し、AppleやSaaS系サイトのような上品なモーションを追加しました。
 
-## 追加内容
+## 追加した動き
 
-- ADcolleの考え方・代表メッセージ
-- 会社情報セクション
-- プライバシーポリシーページ
-- 404エラーページ
-- favicon.svg
-- robots.txt
-- sitemap.xml
-- canonical URL
-- フッターの会社紹介・プライバシーポリシーリンク
+- ページ上部のスクロール進捗バー
+- ヒーローコピーの段階表示
+- ヒーローダッシュボードの登場アニメーション
+- ダッシュボードの光の走査演出
+- グラフの伸長アニメーション
+- 数字カウントアップ
+- カードの段階表示
+- カードの立体的なホバー
+- CTAボタンの光沢アニメーション
+- マウスに反応する控えめなボタン動作
+- 背景光のスクロール連動
+- 動きを減らす端末設定への対応
 
-## 上書き・追加するファイル
+## 上書きするファイル
 
 - `index.html`
 - `css/style.css`
+- `js/script.js`
 - `README.md`
-- `privacy.html`
-- `404.html`
-- `favicon.svg`
-- `robots.txt`
-- `sitemap.xml`
-
-## 正式公開前に変更
-
-- 所在地
-- 代表者名
-- 電話番号
-- メールアドレス
-- プライバシーポリシー制定日
-- 実際の事業内容と対応範囲
 
 ## GitHubへ反映
 
 ```bash
 git add .
-git commit -m "Add company trust pages and SEO foundation"
+git commit -m "Add premium motion and interactions"
 git push
 ```
+
+## 方針
+
+動きを増やしすぎると安っぽくなるため、速度は遅め、移動距離は短め、色は既存の青系に統一しています。

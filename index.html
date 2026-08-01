@@ -41,6 +41,7 @@
 
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <a class="skip-link" href="#main-content">本文へ移動</a>
 
   <header class="site-header" id="top">
@@ -70,10 +71,12 @@
 
   <main id="main-content">
     <section class="hero">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
       <div class="hero-glow glow-one"></div>
       <div class="hero-glow glow-two"></div>
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
+        <div class="hero-copy reveal hero-sequence">
           <p class="eyebrow light">中小企業のための集客設計パートナー</p>
           <h1 class="hero-title">
             <span class="title-line">集客を、</span>
@@ -96,7 +99,7 @@
           </div>
         </div>
 
-        <div class="hero-dashboard reveal" aria-label="集客支援のイメージ">
+        <div class="hero-dashboard reveal hero-dashboard-motion" aria-label="集客支援のイメージ">
           <div class="dashboard-bar">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
             <small>ADcolle Growth Dashboard</small>
@@ -111,9 +114,9 @@
             </div>
 
             <div class="metric-grid">
-              <article><small>問い合わせ</small><strong>+128%</strong><span>前月比</span></article>
-              <article><small>広告反応率</small><strong>3.8%</strong><span>+1.2pt</span></article>
-              <article><small>制作コンテンツ</small><strong>24</strong><span>本</span></article>
+              <article><small>問い合わせ</small><strong class="counter" data-target="128" data-prefix="+" data-suffix="%">0%</strong><span>前月比</span></article>
+              <article><small>広告反応率</small><strong class="counter" data-target="3.8" data-decimals="1" data-suffix="%">0%</strong><span>+1.2pt</span></article>
+              <article><small>制作コンテンツ</small><strong class="counter" data-target="24">0</strong><span>本</span></article>
             </div>
 
             <div class="chart-card">
@@ -156,7 +159,7 @@
           <p>ホームページ、SNS、動画、広告を別々に動かすのではなく、問い合わせまでの流れとしてつなぐ必要があります。</p>
         </div>
 
-        <div class="problem-grid">
+        <div class="problem-grid stagger-group">
           <article class="problem-card reveal"><span>01</span><h3>問い合わせが増えない</h3><p>ホームページはあるが、見込み客が行動する導線が整っていない。</p></article>
           <article class="problem-card reveal"><span>02</span><h3>SNSの反応が弱い</h3><p>投稿を続けても、認知から相談までの流れにつながっていない。</p></article>
           <article class="problem-card reveal"><span>03</span><h3>動画を活かせていない</h3><p>制作後の広告配信や営業活用まで設計されていない。</p></article>
@@ -173,7 +176,7 @@
           <p>単体の制作ではなく、成果につながる組み合わせと順番から設計します。</p>
         </div>
 
-        <div class="service-grid">
+        <div class="service-grid stagger-group">
           <article class="service-card reveal">
             <div class="service-number">01</div><div class="service-icon">▶</div>
             <h3>動画制作</h3><p>会社紹介、採用、商品PR、SNS用ショート動画まで、目的から逆算して制作します。</p>
@@ -207,7 +210,7 @@
             <span class="heading-line"><em>成果が出るまで改善する。</em></span>
           </h2>
         </div>
-        <div class="strength-grid">
+        <div class="strength-grid stagger-group">
           <article class="strength-card reveal"><span>01</span><h3>経営課題から考える</h3><p>制作物からではなく、売上・採用・認知などの目的から必要な施策を整理します。</p></article>
           <article class="strength-card reveal"><span>02</span><h3>窓口を一本化できる</h3><p>動画、広告、WEB、AIを別々に依頼せず、一つの方針で進められます。</p></article>
           <article class="strength-card reveal"><span>03</span><h3>数字を見て改善する</h3><p>アクセスや広告反応を確認し、感覚だけに頼らず改善を積み重ねます。</p></article>
@@ -222,7 +225,7 @@
           <h2>成果につながる支援事例</h2>
           <p class="notice">以下はレイアウト確認用のサンプルです。公開前に実際の事例へ差し替えてください。</p>
         </div>
-        <div class="works-grid">
+        <div class="works-grid stagger-group">
           <article class="work-card reveal"><div class="work-image construction"></div><div class="work-body"><small>建設会社｜集客支援</small><h3>問い合わせ導線を再設計</h3><div class="result"><span>問い合わせ数</span><strong>3.2倍</strong></div><p>会社紹介動画、LP、SNS広告を連動させ、相談までの流れを一本化。</p></div></article>
           <article class="work-card reveal"><div class="work-image manufacturing"></div><div class="work-body"><small>製造業｜採用支援</small><h3>仕事の魅力を動画で可視化</h3><div class="result"><span>採用応募数</span><strong>2.8倍</strong></div><p>社員インタビューと採用ページを制作し、求職者の不安を解消。</p></div></article>
           <article class="work-card reveal"><div class="work-image realestate"></div><div class="work-body"><small>不動産会社｜広告支援</small><h3>SNSから相談予約へ</h3><div class="result"><span>資料請求数</span><strong>4.5倍</strong></div><p>短尺動画と広告配信を組み合わせ、見込み客の獲得効率を改善。</p></div></article>
@@ -317,7 +320,7 @@
           <p>金額は目安です。課題と優先順位を整理したうえで、必要な内容だけをご提案します。</p>
         </div>
 
-        <div class="pricing-grid">
+        <div class="pricing-grid stagger-group">
           <article class="pricing-card reveal">
             <div class="plan-label">STARTER</div>
             <h3>集客スタータープラン</h3>
@@ -370,7 +373,7 @@
     <section class="section" id="flow">
       <div class="container">
         <div class="section-heading reveal"><p class="eyebrow">FLOW</p><h2>ご相談から改善まで</h2></div>
-        <div class="flow-grid">
+        <div class="flow-grid stagger-group">
           <article class="flow-card reveal"><span>01</span><h3>無料相談</h3><p>現状と目標を整理します。</p></article>
           <article class="flow-card reveal"><span>02</span><h3>戦略設計</h3><p>必要な施策と優先順位をご提案します。</p></article>
           <article class="flow-card reveal"><span>03</span><h3>制作・準備</h3><p>動画、WEB、広告素材を制作します。</p></article>
@@ -442,9 +445,9 @@
             <span class="heading-line">整理するところから。</span>
           </h2>
           <p>「何を依頼すればよいか分からない」という段階でも問題ありません。事業の状況を伺い、優先順位を一緒に整理します。</p>
-          <div class="contact-points"><span>相談無料</span><span>オンライン対応</span><span>無理な営業なし</span></div>
+          <div class="contact-points stagger-group"><span>相談無料</span><span>オンライン対応</span><span>無理な営業なし</span></div>
 
-          <div class="contact-methods">
+          <div class="contact-methods stagger-group">
             <a class="contact-method" href="tel:0000000000">
               <span class="method-icon">TEL</span>
               <div><small>電話で相談</small><strong>電話番号を設定してください</strong></div>

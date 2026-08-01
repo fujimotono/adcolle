@@ -10,6 +10,105 @@
   const diagnosisResult = document.querySelector(".diagnosis-result");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+
+  const scrollProgress = document.querySelector(".scroll-progress span");
+  const hero = document.querySelector(".hero");
+  const heroOrbOne = document.querySelector(".hero-orb-one");
+  const heroOrbTwo = document.querySelector(".hero-orb-two");
+
+  const updateScrollEffects = () => {
+    const doc = document.documentElement;
+    const scrollable = doc.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+
+    if (scrollProgress) {
+      scrollProgress.style.width = `${Math.min(progress * 100, 100)}%`;
+    }
+
+    if (!reduceMotion && hero) {
+      const heroRect = hero.getBoundingClientRect();
+      if (heroRect.bottom > 0) {
+        const offset = Math.min(window.scrollY * .08, 70);
+        if (heroOrbOne) heroOrbOne.style.transform = `translate3d(0, ${offset}px, 0)`;
+        if (heroOrbTwo) heroOrbTwo.style.transform = `translate3d(0, ${-offset * .55}px, 0)`;
+      }
+    }
+  };
+
+  updateScrollEffects();
+  window.addEventListener("scroll", updateScrollEffects, { passive: true });
+
+  document.querySelectorAll(".stagger-group").forEach(group => {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      group.classList.add("visible");
+      return;
+    }
+
+    const groupObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          groupObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .14, rootMargin: "0px 0px -40px" });
+
+    groupObserver.observe(group);
+  });
+
+  const counters = document.querySelectorAll(".counter");
+
+  const animateCounter = element => {
+    const target = Number(element.dataset.target || 0);
+    const decimals = Number(element.dataset.decimals || 0);
+    const prefix = element.dataset.prefix || "";
+    const suffix = element.dataset.suffix || "";
+    const duration = 1200;
+    const start = performance.now();
+
+    const frame = now => {
+      const elapsed = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - elapsed, 3);
+      const value = target * eased;
+      element.textContent = `${prefix}${value.toFixed(decimals)}${suffix}`;
+
+      if (elapsed < 1) requestAnimationFrame(frame);
+    };
+
+    requestAnimationFrame(frame);
+  };
+
+  if (counters.length) {
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .65 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+  }
+
+  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".button").forEach(button => {
+      button.classList.add("magnetic");
+
+      button.addEventListener("mousemove", event => {
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.left - rect.width / 2;
+        const y = event.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * .045}px, ${y * .08}px)`;
+      });
+
+      button.addEventListener("mouseleave", () => {
+        button.style.transform = "";
+      });
+    });
+  }
+
+
   const closeMenu = () => {
     if (!menuButton || !nav) return;
     nav.classList.remove("open");
